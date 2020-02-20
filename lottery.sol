@@ -2,7 +2,11 @@ pragma solidity ^0.4.17;
 
 contract Lottery {
     
+    // Address of person who creaed the
+    // contract
     address public manager;
+    // Array of addresses of people who
+    // have entered.
     address[] public players;
     
     // Constructor function that will set
@@ -19,4 +23,17 @@ contract Lottery {
         
         players.push(msg.sender);
     }
+    
+    // Function that genrates pseudo-random uint from 
+    // the current block difficulty, currenty time, and
+    // addresses of players and them putting it
+    // into the SHA3 algorithm.
+    function random() private view returns(uint) {
+        return uint(sha3(block.difficulty, now, players));
+    }
+    
+    // Function that randomly picks a winner
+    // and sends them the prize pool.
+    //function pickWinner
+    
 }
