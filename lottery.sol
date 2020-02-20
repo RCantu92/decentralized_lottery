@@ -34,6 +34,8 @@ contract Lottery {
     
     // Function that randomly picks a winner
     // and sends them the prize pool.
-    //function pickWinner
+    function pickWinner() public {
+        uint index = random() % players.length;
+    }
     
 }
