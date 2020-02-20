@@ -36,6 +36,7 @@ contract Lottery {
     // and sends them the prize pool.
     function pickWinner() public {
         uint index = random() % players.length;
+        players[index].transfer(this.balance);
     }
     
 }
