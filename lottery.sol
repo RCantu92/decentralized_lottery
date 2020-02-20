@@ -15,6 +15,8 @@ contract Lottery {
     // Function to enter the address of the
     // bidder into the 'players' array
     function enter() public payable {
+        require(msg.value > .01 ether);
+        
         players.push(msg.sender);
     }
 }
