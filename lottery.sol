@@ -36,7 +36,10 @@ contract Lottery {
     // and sends them the prize pool.
     // The function then clears out the players
     // array so that it can be reused.
+    // This function can also be called byt
+    // the manager address.
     function pickWinner() public {
+        require(msg.sender == manager);
         uint index = random() % players.length;
         players[index].transfer(this.balance);
         players = new address[](0);
