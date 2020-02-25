@@ -9,6 +9,14 @@ contract Lottery {
     // have entered.
     address[] public players;
     
+    // This modifier is added to functions
+    // so that functions can only  be called
+    // by the manager address.
+    modifier onlyManager() {
+        require(msg.sender == manager);
+        _;
+    }
+    
     // Constructor function that will set
     // the manager variable to the address
     // that created the contract.
@@ -36,12 +44,13 @@ contract Lottery {
     // and sends them the prize pool.
     // The function then clears out the players
     // array so that it can be reused.
-    // This function can also be called byt
-    // the manager address.
-    function pickWinner() public {
-        require(msg.sender == manager);
+    function pickWinner() public onlyManager {
         uint index = random() % players.length;
         players[index].transfer(this.balance);
         players = new address[](0);
+    }
+    
+    function getPlayers() public view {
+        
     }
 }
