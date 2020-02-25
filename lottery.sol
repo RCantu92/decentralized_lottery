@@ -34,9 +34,11 @@ contract Lottery {
     
     // Function that randomly picks a winner
     // and sends them the prize pool.
+    // The function then clears out the players
+    // array so that it can be reused.
     function pickWinner() public {
         uint index = random() % players.length;
         players[index].transfer(this.balance);
+        players = new address[](0);
     }
-    
 }
