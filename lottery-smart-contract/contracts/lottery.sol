@@ -2,9 +2,10 @@ pragma solidity ^0.4.17;
 
 contract Lottery {
     
-    // Address of person who creaed the
+    // Address of person who created the
     // contract
     address public manager;
+    
     // Array of addresses of people who
     // have entered.
     address[] public players;
