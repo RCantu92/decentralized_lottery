@@ -46,7 +46,7 @@ const deploy = async () => {
         .send({ gas: '1000000', from: accounts[0] });
 
     // Logging the ABI of the compiled contract.
-    // console.log(interface);
+    console.log(interface);
     // Logging the address of the deployed contract.
     console.log('Contract deployed to', result.options.address);
 };

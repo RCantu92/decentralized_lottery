@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+// Import the instance of web3 created
+// from the web.js file.
 import web3 from './web3.js';
+// Import the local instance of the
+// lottery contract.
 import lottery from './lottery.js';
  
 class App extends Component {
