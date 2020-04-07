@@ -1,6 +1,6 @@
 // Load in the path module
 const path = require('path');
-// Load in the filesystem module
+// Load in the file system module
 const fs = require('fs');
 // Load in the solidity compiler module
 const solc = require('solc');
