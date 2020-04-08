@@ -38,6 +38,7 @@ This contract is deployed on the rinkeby testnet under address [0x40102DAa67EE7c
 * [Assert](https://nodejs.org/api/assert.html) - Module that provides a set of assertion functions for verifying invariants.
 * [Infura](https://infura.io/) - API used to access the Ethereum and IPFS networks.
 * [truffle-hdwallet-provider](https://github.com/trufflesuite/truffle-hdwallet-provider) - HD Wallet-enabled Web3 provider. Used to sign transactions for addresses derived from a 12-word mnemonic.
+* [React](https://reactjs.org/) - JavaScript library for building user interfaces.
 * [Create React App](https://github.com/facebook/create-react-app) - Tool to build React apps.
 * [MetaMask](https://metamask.io/) - Browser based wallet used to connect to the Ethereum mainnet as well as testnets.
 
