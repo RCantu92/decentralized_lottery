@@ -4,23 +4,84 @@ This project aims to provide a lottery smart contract that accepts Ether into it
 
 ## Getting Started
 
-The following image demonstrates the process of submitting funds to the contract, through a local react app.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-![](./images/decentralized_lottery_pre-funds.png)
+### Installing
 
-After submitting funds, the page looks like the following.
+What things you need to install the software and how to install them
 
-![](./images/decentralized_lottery_accepted_funds.png)
+solc
 
-This is the page refreshed to reflect the change in pot balance.
+```
+npm install solc
+```
+Mocha
 
-![](./images/decentralized_lottery_accepted_funds_II.png)
+```
+npm install --save mocha
+```
+Ganache CLI
 
-Once the pot has been awarded, the page looks like the following.
+```
+npm install --save ganache-cli
+```
+web3
 
-![](./images/decentralized_lottery_awarded_funds.png)
+```
+npm install --save web3@v.1.0.0-beta.35
+```
+truffle-hdwallet-provider
+
+```
+npm install truffle-hdwallet-provider
+```
+React
+
+```
+npm install --save react
+```
+
+You will also need to install [MetaMask](https://metamask.io/) on your browser, and create an account with [Infura](https://infura.io/).
+
+## Running the tests
+
+Navigate into the lottery-smart-contract/ directory, and once in there, run the
+following in the command line:
+
+```
+npm run test
+```
+If all the tests are passed, you should an output similar to the following:
+
+![](./images/npm_test_output.png)
+
+*(Note: the warning should not appear and will be looked into further.)
 
 ## Deployment
+
+To deploy the lottery smart contract onto the Rinkeby Ethereum testnet, you would navigate back to the lottery-smart-contract directory and run the following in the command line:
+
+```
+node deploy.js
+```
+
+Once deployed, you should see message like the following:
+
+![](./images/node_deploy_output.png)
+
+*(Note: the output is comprised of both the contract ABI and the contract address. Also, this is a different deployed address than the listed at the end of this README.)
+
+To now render a local instance of contract on your browser, navigate to the lottery-react/ directory.
+
+Once inside, run the following in the command line:
+
+```
+npm run start
+```
+
+After running the above command, the React app should launch in your browser. The following gif demonstrates the process of submitting funds to the lottery and selecting a winner.
+
+![](./images/decentralized_lottery_demo.gif)
 
 This contract is deployed on the rinkeby testnet under address [0x40102DAa67EE7c1748F01FB22578d778a0E55f25](https://rinkeby.etherscan.io/address/0x40102daa67ee7c1748f01fb22578d778a0e55f25).
 
