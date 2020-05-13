@@ -11,7 +11,7 @@ pragma solidity ^0.4.17;
  */
 contract Lottery {
     
-    /*
+    /**
      * Address of person who created the
      * contract and who would be able to
      * tell the contract to randomly
